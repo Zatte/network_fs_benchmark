@@ -49,3 +49,9 @@ All the files will be generated with both random data (/dev/random) and all zero
 * packet corruption
 
 
+#Expriment log#
+
+###Software used###
+Host Operating system : Windows 7, 64 Bit.
+Hypervisor : Oracle virtualbox 4.3.6
+OS : ubuntu-14.04.1-server-amd64
