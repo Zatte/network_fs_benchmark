@@ -55,3 +55,31 @@ All the files will be generated with both random data (/dev/random) and all zero
 Host Operating system : Windows 7, 64 Bit.
 Hypervisor : Oracle virtualbox 4.3.6
 OS : ubuntu-14.04.1-server-amd64
+
+###Software used - Virtualized Networking Hosts###
+iperf - Establishing a baseline for raw TCP / UDP performance giving each network configuration. 
+iproute2 / netem - To emulate WAN connection properties
+
+#### Network setup ####
+
+Host A <-> Host B <-> Host C
+
+## Host A ##
+ip 192.168.200.2
+network 255.255.255.0
+default route : 192.168.200.1
+
+## Host B ##
+*Network card 1*
+ip 192.168.200.1
+network 255.255.255.0
+
+*Network card 2*
+ip 192.168.201.1
+network 255.255.255.0
+
+## Host C ##
+ip 192.168.201.2
+network 255.255.255.0
+default route : 192.168.201.1
+
