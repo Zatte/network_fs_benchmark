@@ -60,6 +60,10 @@ OS : ubuntu-14.04.1-server-amd64
 iperf - Establishing a baseline for raw TCP / UDP performance giving each network configuration. 
 iproute2 / netem - To emulate WAN connection properties
 
+*Installation Steps*
+ * apt-get update
+ * apt-get install vsftpd openssh-server samba nginx nfs-kernel-server
+
 #### Network setup ####
 
 Host A <-> Host B <-> Host C
