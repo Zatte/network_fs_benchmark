@@ -6,13 +6,19 @@ To accurately be measure the performance of different network file systems under
 ###Approach###
 Setup 3 virtualboxes(A,B,C) logically linked A<->B<->C and route traffic from A to C throuh B. On B configure linux netem to simulate various network conditions and from A->C measure the performance of various network protocols. 
 
+###Delimitations###
+We aim to investigate each protocol's individual overhead over IP and not the underlying IP + TCP/UDP performance. This menas that we will use a raw UDP and TCP baseline as a comparisson. The goal is not to capture known issues with IP and control protocols but rather figure out how each file-protocol woks on top the other protocols. 
+For example: A protocol utizling TCP will have the effects of the 3-way handshake and slow start ignored once, however if the procol makes use of several connections for it's file transfers those effects will be accounted for as they are side effects of the protocol design.  
+
 ###Protocols to investigate###
 * Raw TCP (reference point) 
 * Raw UDP (reference point)
 * FTP
-* HTTP/HTTPS
+* HTTP/HTTPS v1.1
 * * GET
 * * PUT 
+* HTTP v2
+* * GET
 * * POST
 * NFS 
 * SMB
