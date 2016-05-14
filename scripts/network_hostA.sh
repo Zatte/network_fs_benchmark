@@ -7,3 +7,5 @@ iface eth0 inet static
   netmask 255.255.255.0
   gateway 192.168.200.1
 EOL
+
+route add -net 192.168.201.0 netmask 255.255.255.0 gw 192.168.200.1 dev eth1
